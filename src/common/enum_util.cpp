@@ -817,6 +817,7 @@ const StringUtil::EnumStringLiteral *GetCompressionTypeValues() {
 		{ static_cast<uint32_t>(CompressionType::COMPRESSION_ALP), "COMPRESSION_ALP" },
 		{ static_cast<uint32_t>(CompressionType::COMPRESSION_ALPRD), "COMPRESSION_ALPRD" },
 		{ static_cast<uint32_t>(CompressionType::COMPRESSION_ZSTD), "COMPRESSION_ZSTD" },
+		{ static_cast<uint32_t>(CompressionType::COMPRESSION_JSON5), "COMPRESSION_JSON5" },
 		{ static_cast<uint32_t>(CompressionType::COMPRESSION_COUNT), "COMPRESSION_COUNT" }
 	};
 	return values;
@@ -1572,7 +1573,8 @@ const StringUtil::EnumStringLiteral *GetFileCompressionTypeValues() {
 		{ static_cast<uint32_t>(FileCompressionType::AUTO_DETECT), "AUTO_DETECT" },
 		{ static_cast<uint32_t>(FileCompressionType::UNCOMPRESSED), "UNCOMPRESSED" },
 		{ static_cast<uint32_t>(FileCompressionType::GZIP), "GZIP" },
-		{ static_cast<uint32_t>(FileCompressionType::ZSTD), "ZSTD" }
+		{ static_cast<uint32_t>(FileCompressionType::ZSTD), "ZSTD" },
+		{ static_cast<uint32_t>(FileCompressionType::JSON5), "JSON5" }
 	};
 	return values;
 }

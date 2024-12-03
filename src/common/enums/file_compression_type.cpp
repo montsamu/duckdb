@@ -12,6 +12,8 @@ FileCompressionType FileCompressionTypeFromString(const string &input) {
 		return FileCompressionType::GZIP;
 	} else if (parameter == "zstd") {
 		return FileCompressionType::ZSTD;
+	} else if (parameter == "json5") {
+		return FileCompressionType::JSON5;
 	} else if (parameter == "uncompressed" || parameter == "none" || parameter.empty()) {
 		return FileCompressionType::UNCOMPRESSED;
 	} else {
@@ -25,6 +27,8 @@ string CompressionExtensionFromType(const FileCompressionType type) {
 		return ".gz";
 	case FileCompressionType::ZSTD:
 		return ".zst";
+	case FileCompressionType::JSON5:
+		return ".json5";
 	default:
 		throw NotImplementedException("Compression Extension of file compression type is not implemented");
 	}

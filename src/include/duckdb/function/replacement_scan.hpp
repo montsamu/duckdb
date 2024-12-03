@@ -65,6 +65,9 @@ struct ReplacementScan {
 		} else if (StringUtil::EndsWith(lower_name, CompressionExtensionFromType(FileCompressionType::ZSTD))) {
 			lower_name = lower_name.substr(0, lower_name.size() - 4);
 		}
+		} else if (StringUtil::EndsWith(lower_name, CompressionExtensionFromType(FileCompressionType::JSON5))) {
+			lower_name = lower_name.substr(0, lower_name.size() - 5);
+		}
 
 		for (auto &extension : extensions) {
 			if (StringUtil::EndsWith(lower_name, "." + extension) ||

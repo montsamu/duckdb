@@ -68,4 +68,9 @@ struct ZSTDFun {
 	static bool TypeIsSupported(PhysicalType type);
 };
 
+struct JSON5Fun {
+	static CompressionFunction GetFunction(PhysicalType type);
+	static bool TypeIsSupported(PhysicalType type);
+};
+
 } // namespace duckdb

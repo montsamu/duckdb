@@ -46,6 +46,8 @@ CompressionType CompressionTypeFromString(const string &str) {
 		return CompressionType::COMPRESSION_ALP;
 	} else if (compression == "alprd") {
 		return CompressionType::COMPRESSION_ALPRD;
+	} else if (compression == "json5") {
+		return CompressionType::COMPRESSION_JSON5;
 	} else {
 		return CompressionType::COMPRESSION_AUTO;
 	}
@@ -79,6 +81,8 @@ string CompressionTypeToString(CompressionType type) {
 		return "ALP";
 	case CompressionType::COMPRESSION_ALPRD:
 		return "ALPRD";
+	case CompressionType::COMPRESSION_JSON5:
+		return "json5";
 	default:
 		throw InternalException("Unrecognized compression type!");
 	}

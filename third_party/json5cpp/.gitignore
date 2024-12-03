@@ -1,0 +1,5 @@
+/build
+/fuzz-data
+*.dSYM
+.cache
+compile_commands.json
